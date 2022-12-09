@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css"> 
+
+
+<style>
+
+* {box-sizing: border-box;}
+    
+    body{ 
+      margin: 20px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      align-items: center;
+      font-size: 20px;
+    }  
+    /* the content inside class headerD */
+    .headersD{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-radius: 35px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .headersD th{
+      /* lock the dimensions */
+      width: 200px;
+      text-align: center;
+      padding: 8px;
+      
+      
+     
+
+    }
+   
+      
+    .header {
+    /* flex */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+      border-radius: 35px;
+      border-radius: 35px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+    .header a.logo {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    
+    .sub-header {
+      padding: 10px;
+      
+      font-size: 20px;
+      
+    }
+    h1,h2{
+      font-size: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    table {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    /* box class style */
+  
+/* style the details class */
+    .details{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      
+      border-radius: 35px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .details p{
+      font-size: 16px;
+    }
+    .details strong{
+      font-size: 16px;
+    }
+
+    
+
+</style>
+
+
+    </head>
+    <body>
+    
+    <div class="header">
+      <a href="#default" class="logo">SIGMA Report</a>
+      <p style="font-size: 6;">Date: {{date}}</p>
+    </div>
+    
+    <div class="sub-header" >
+      <h1>Vulnerability Scanning : </h1>
+      <p>Web Application Vulnerability Scanners are automated tools that scan web applications, normally from the outside, to look for security vulnerabilities such as Cross-site scripting, SQL Injection, Command Injection, Path Traversal and insecure server configuration.
+      </p>
+    </div>
+    <div style="margin-left:auto" >
+     <h2 > Vulnerability Section : </h2>
+     
+
+      <div class="headersD">
+      <h3>1) Headers Details:</h3>
+
+      {% for vulnerability in vulnerabilities %}
+      <h3>{{ vulnerability.name }}</h3>
+      <table>
+      <tr>
+      <th>Severity</th>
+        <td style="background-color:{{vulnerability.color}};text-align: center;">{{ vulnerability.severity }}</td>
+      </tr>
+
+      <tr>
+        <th>Description</th><td>{{ vulnerability.summary }}</td>
+      </tr>
+
+      <tr>
+        <th>Impact</th><td>{{ vulnerability.impact }}</td>
+      </tr>
+      
+      <tr>
+        <th>Remediation</th><td>{{ vulnerability.remediation }}</td>
+      </tr>
+      </table>
+      {% endfor %}
+
+      <h3>2) Open Ports:</h3>
+      {% for port in ports %}
+      <h3>{{ port.name }}</h3>
+      <table>
+        <tr>
+          <th>Protocol</th><td>{{ port.protocol }}</td>
+        </tr>
+
+        <tr>
+          <th>Service</th><td>{{ port.service }}</td>
+        </tr>
+      <tr>
+        <th>Description</th><td>{{ port.summary }}</td>
+      </tr>
+
+      <tr>
+        <th>Impact</th><td>{{ port.impact }}</td>
+      </tr>
+      </table>
+      {% endfor %}
+    </div>
+    
+    
+  </div>
+  <h3>3) Report Details:</h3>
+   <div class="box" >
+     <div class="x-box"></div>
+     <div class="x-box-cont">
+        <h3>Severities PieChart</h3>
+        <strong style="color: red;">Crtical 15%</strong>
+        <strong style="color: rgb(121, 9, 138)" >Medium 30%</strong>
+        <strong style="color: blue">low 45%</strong>
+        <strong style="color: green" >Best Pratice 20%</strong>
+     </div>
+    </div>
+    <div class="details">
+     <strong>This PieChart is talking about percentage of Vulnerability and Headers Severities .To help you better decide which vulnerabilities should be fixed first, we classified the severities into 4 categories : Critical, Medium, 
+      Low, Best practice. </strong>
+      <p> 1) Critical Severity :  The headers or vulnerabilities marked as Critical Severity can allow attackers to execute code on the web application or application server, or access sensitive data.
+      <br><br>  Impacts: SQL Injection, Remote Code Execution and Command Injections. </p>
+      <p> 2) Medium Severity : The headers or vulnerabilities marked as Medium Severity usually arise because of errors and deficiencies in the application configuration. By exploiting these security issues, malicious attackers can access sensitive information on the application or server.
+      <br><br>  Impacts: Cross-Site Scripting, Cross-Site Request Forgery, Directory Traversal, and Information Disclosure.  </p>
+
+      <p> 3) Low Severity : The headers or vulnerabilities marked as Low Severity are usually not critical, but they can still be exploited by attackers to access sensitive information on the application or server.  </p>
+      <p> 4) Best Practice : The headers or vulnerabilities marked as Best Practice are not critical, but they can still be exploited by attackers to access sensitive information on the application or server.
+      </p>
+    </div>
+</body>
+</html>

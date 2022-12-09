@@ -1,0 +1,79 @@
+
+
+
+.box{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    /* space between */
+    justify-content:space-evenly;
+
+    
+   
+}
+.x-box{
+  
+    width:40vh ;
+    height: 40vh;
+    border-radius: 50%;
+    background-color: green;
+    margin-bottom: 7vh;
+    margin-left: 7vh;
+
+    background:repeating-conic-gradient(
+     from 0deg,
+     red 0deg calc(3.6deg * 15),
+     rgb(121, 9, 138) calc(3.6deg * 15) calc(3.6deg * 45),
+     blue calc(3.6deg * 45) calc(3.6deg * 80),
+     green calc(3.6deg * 80) calc(3.6deg * 100)
+
+  
+    ) ;
+  
+  }
+  .x-box-cont{
+    border-radius: 54px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  41px 41px 82px #989898,
+             -41px -41px 82px #ffffff;
+    width: 40vh;
+    height: 40vh;
+    /* center and fit content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 7vh;
+    margin-left: 7vh;
+
+
+  
+  }
+  .x-box-cont h3{
+    font-size: 30px;
+    /* text-transform: uppercase; */
+   
+    
+  
+    
+  }
+  .x-box-cont strong{
+  
+    display: block;
+    margin-bottom: 15px;
+    
+  
+  }
+
+
