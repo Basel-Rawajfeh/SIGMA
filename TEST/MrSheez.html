@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+
+
+
+
+<style>
+
+* {box-sizing: border-box;}
+    
+    body{ 
+      margin: 20px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      align-items: center;
+      font-size: large;
+    }  
+    /* the content inside class headerD */
+    .headersD{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+    }
+
+    
+      
+    .header {
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+    }
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+    .header a.logo {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    
+    h1,h2{
+      font-size: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    /* box class style */
+    .box {
+      position: relative;
+      border-radius: 3px;
+      background: #ffffff;
+      border-top: 3px solid #dce4ec;
+      margin-bottom: 20px;
+      width: 100%;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+    .box-header {
+      color: #fff;
+      display: block;
+      padding: 10px;
+      position: relative;
+      border-radius: 3px 3px 0 0;
+    }
+    .box-header.with-border {
+      border-bottom: 1px solid #f4f4f4;
+    }
+    .box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title {
+      display: inline-block;
+      font-size: 18px;
+      margin: 0;
+      line-height: 1;
+    }
+    .box-header>.fa, .box-header>.glyphicon, .box-header>.ion {
+      margin-right: 5px;
+    }
+    .box-header>.box-tools {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+    .box-header>.box-tools [data-toggle="tooltip"] {
+      position: relative;
+    }
+    .box-header>.box-tools.pull-right .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+    .box-header>.box-tools .btn {
+      padding: 5px;
+      font-size: 12px;
+      border-radius: 2px;
+    }
+    .box-body {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      padding: 10px;
+    }
+    .box-footer {
+      border-top: 1px solid #f4f4f4;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      padding: 10px;
+      background-color: #fff;
+    }
+    .box-comments, .box-comments>li {
+      list-style: none;
+      margin: 0;
+      padding: 0;}
+/* style the details class */
+    .details{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+    }
+    .details h3{
+      font-size: 20px;
+    }
+    .details p{
+      font-size: 16px;
+    }
+    .details li{
+      font-size: 16px;
+    }
+    .details h4{
+      font-size: 16px;
+    }
+    .details h5{
+      font-size: 16px;
+    }
+    .details h6{
+      font-size: 16px;
+    }
+    .details a{
+      font-size: 16px;
+    }
+    .details div{
+      font-size: 16px;
+    }
+    .details span{
+      font-size: 16px;
+    }
+    .details td{
+      font-size: 16px;
+    }
+    .details th{
+      font-size: 16px;
+    }
+    .details tr{
+      font-size: 16px;
+    }
+    .details code{
+      font-size: 16px;
+    }
+    .details pre{
+      font-size: 16px;
+    }
+    .details table{
+      font-size: 16px;
+    }
+    .details thead{
+      font-size: 16px;
+    }
+    .details tbody{
+      font-size: 16px;
+    }
+    .details tfoot{
+      font-size: 16px;
+    }
+    .details ul{
+      font-size: 16px;
+    }
+    .details ol{
+      font-size: 16px;
+    }
+    .details strong{
+      font-size: 16px;
+    }
+    .details em{
+      font-size: 16px;
+    }
+    .details cite{
+      font-size: 16px;
+    }
+    .details blockquote{
+      font-size: 16px;
+    }
+    .details q{
+      font-size: 16px;
+    }
+    .details hr{
+      font-size: 16px;
+    }
+    .details s{
+      font-size: 16px;
+    }
+    .details i{
+      font-size: 16px}
+
+    
+
+</style>
+
+
+    </head>
+    <body>
+    
+    <div class="header">
+      <a href="#default" class="logo">SIGMA Report</a>
+     
+    </div>
+    
+    <div >
+      <h1>Vulnerability Scanning : </h1>
+      <p>Web Application Vulnerability Scanners are automated tools that scan web applications, normally from the outside, to look for security vulnerabilities such as Cross-site scripting, SQL Injection, Command Injection, Path Traversal and insecure server configuration.
+      </p>
+    </div>
+    <div style="margin-left:auto">
+     <h2 > Vulnerability Section : </h2>
+     
+      <div class="headersD">
+      <h3>1) Headers Details:</h3>
+
+      <h3>Strict-Transport-Security</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td>The Strict-Transport-Security response header (often abbreviated as HSTS) lets a web site tell browsers that it should only be accessed using HTTPS, instead of using HTTP.
+      </td></tr>
+      </table>
+      
+
+
+
+
+      <h3>Content-Security-Policy</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The Content-Security-Policy response header allows web site administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints. This helps guard against cross-site scripting attacks (XSS).
+      </td></tr>
+      </table>
+     
+
+
+
+      <h3>X-XSS-Protection</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The X-XSS-Protection HTTP header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong Content-Security-Policy that disables the use of inline JavaScript ('unsafe-inline'), they can still provide protections for users of older web browsers that don't yet support CSP.
+      </table>
+    
+
+      
+      <h3>X-Content-Type-Options</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The X-Content-Type-Options response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This is done to avoid a browser changing MIME types, for example, to HTML, when it is served as plain text.
+      </table>
+      
+
+
+
+
+      <h3>Referrer-Policy</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The Referrer-Policy response header controls how much information the browser includes with navigations away from a document and should be set by all sites. </td></tr>
+      </table>
+   
+
+
+
+
+
+
+      <h3>Feature-Policy</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td>The Feature-Policy response header allows a site to control which features and APIs can be used in the browser. </td></tr>
+      
+      </table>
+      
+
+
+
+
+
+      <h3>Expect-CT</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The Expect-CT HTTP header allows web sites to opt-in to reporting and/or enforcement of Certificate Transparency requirements.   </td></tr>
+      
+           </table>
+     
+
+
+
+
+
+      <h3>Public-Key-Pins</h3>
+      <table><tr><th>Severity</th><td style="background-color: red;text-align: center; color: white;">Critical</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The Public-Key-Pins HTTP header allows web sites to pin their keys to prevent MITM attacks with forged certificates. </td></tr>
+             
+      </table>
+      
+
+                   
+
+      <h3>X-Frame-Options</h3>
+      <table><tr><th>Severity</th><td style="background-color: blue;text-align: center; color: white;">Low</td></tr>
+      <tr><th>Impact</th><td>When target user click on the top level page the attacker will hijack  and routing them to another page.</td></tr>
+      <tr><th>Remediation</th><td>Send the proper x-frame-options in http response header and employing defensive code</td></tr>
+      <tr><th>Summary</th><td> The X-Frame-Options HTTP header field indicates a policy that specifies whether the browser should render the transmitted resource within a frame or an iframe. </td></tr>
+      </table>
+      
+
+ 
+    
+
+     
+      </div>
+      <h3>3) Report Details:</h3>
+    </div>
+   <div class="box" >
+     <div class="x-box"></div>
+     <div class="x-box-cont">
+        <h3>Severities PieChart</h3>
+        <strong style="color: red;">Crtical 15%</strong>
+        <strong style="color: rgb(121, 9, 138)" >Medium 30%</strong>
+        <strong style="color: blue">low 45%</strong>
+        <strong style="color: green" >Best Pratice 20%</strong>
+     </div>
+    </div>
+    <div class="details">
+     <strong>This PieChart is talking about percentage of Vulnerability and Headers Severities .To help you better decide which vulnerabilities should be fixed first, we classified the severities into 4 categories : Critical, Medium, 
+      Low, Best practice. </strong>
+      <p> 1) Critical Severity :  The headers or vulnerabilities marked as Critical Severity can allow attackers to execute code on the web application or application server, or access sensitive data.
+      <br><br>  Impacts: SQL Injection, Remote Code Execution and Command Injections. </p>
+      <p> 2) Medium Severity : The headers or vulnerabilities marked as Medium Severity usually arise because of errors and deficiencies in the application configuration. By exploiting these security issues, malicious attackers can access sensitive information on the application or server.
+      <br><br>  Impacts: Cross-Site Scripting, Cross-Site Request Forgery, Directory Traversal, and Information Disclosure.  </p>
+
+      <p> 3) Low Severity : The headers or vulnerabilities marked as Low Severity are usually not critical, but they can still be exploited by attackers to access sensitive information on the application or server.  </p>
+      <p> 4) Best Practice : The headers or vulnerabilities marked as Best Practice are not critical, but they can still be exploited by attackers to access sensitive information on the application or server.
+      </p>
+    </div>
+</body>
+</html>
