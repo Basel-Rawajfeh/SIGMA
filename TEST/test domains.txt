@@ -1,4 +1,0 @@
-www.root-me.org
-ctflearn.com
-dvwa.co.uk
-tryhackme.com
