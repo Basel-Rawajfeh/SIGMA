@@ -81,18 +81,13 @@ text_box.grid(row=2,column=0,columnspan=2)
 
 # label.pack(expand=1, fill='both')
 
-
-
-
 tab_control.pack(expand=1, fill='both')
+
 port_list_id = []
 vul_list_id = []
 portslist = []  
 # define ip variable
 domain = ""
-# returns True if a connection can be made, False otherwise
-
-
 def main():
    global entry
    domain = entry.get()
@@ -102,21 +97,15 @@ def main():
         domain
    elif not domain.startswith("http://") or not domain.startswith("https://"):
         domain = "http://"+ domain
-   
-
    # change the label text 
    if entry.get() == "":
-
      label.configure(text="Please enter an URL")
      #   change label color
      label.configure(fg="red")
      # change the label size  
      label.configure(font=("Arial", 12))
-    
-   else:  
-          
+   else:    
           headers = requests.get(domain).headers
-          
 
           if 'Content-Security-Policy' in headers:
                disable()
@@ -134,17 +123,18 @@ def main():
                 cookies = requests.get(domain).cookies
                 for cookie in cookies:
                     if cookie.secure == False:
-                         vul_list_id.append(6)
+                         
                          break
                     else:
+                         vul_list_id.append(6)
                          pass
                # check if cookies are httpOnly
-                for cookie in cookies:
-                    if cookie.has_nonstandard_attr('httponly') or cookie.has_nonstandard_attr('HttpOnly'):
-                         vul_list_id.append(4)
-                         break   
-                    else:        
-                         pass
+                    for cookie in cookies:   
+                         if cookie.has_nonstandard_attr('HttpOnly') == False:
+                              vul_list_id.append(4)
+                              break
+                         else:
+                              pass
           cookiesscan(domain)  
               
           def scan_xframe(self):
