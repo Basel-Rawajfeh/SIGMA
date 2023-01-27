@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css"> 
+
+
+<style>
+
+* {box-sizing: border-box;}
+    
+    body{ 
+      margin: 20px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      align-items: center;
+      font-size: 20px;
+    }  
+    /* the content inside class headerD */
+    .headersD{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-radius: 35px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .headersD th{
+      /* lock the dimensions */
+      width: 200px;
+      text-align: center;
+      padding: 8px;
+      
+      
+     
+
+    }
+   
+      
+    .header {
+    /* flex */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 10px;
+      border-radius: 35px;
+      border-radius: 35px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+    }
+    .header a.logo {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    
+    .sub-header {
+      padding: 10px;
+      
+      font-size: 20px;
+      
+    }
+    h1,h2{
+      font-size: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    table {
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    /* box class style */
+  
+/* style the details class */
+    .details{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 20px;
+      border-radius: 35px;
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  45px 45px 90px #ebebeb,
+             -45px -45px 90px #ffffff;
+    }
+    .details p{
+      font-size: 20px;
+    }
+    .details strong{
+      font-size: 20px;
+    }
+    .footer {
+      padding: 2;
+      text-align: center;
+      
+      margin-top: 20px;
+    }
+    
+
+
+.box{
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    /* space between */
+    justify-content:space-evenly;
+    /* margin */
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    /* width */
+    width: 100%;
+    /* height */
+    height: 50vh;
+    /* background */
+    background: #fff;
+    /* border */
+
+    
+   
+}
+
+  .x-box-cont{
+    border-radius: 54px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  41px 41px 82px #989898,
+             -41px -41px 82px #ffffff;
+    width: 40vh;
+    height: 40vh;
+    /* center and fit content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 7vh;
+    margin-left: 7vh;
+
+
+  
+  }
+  .x-box-cont h3{
+    font-size: 30px;
+    /* text-transform: uppercase; */
+   
+    
+  
+    
+  }
+  .x-box-cont strong{
+  
+    display: block;
+    margin-bottom: 15px;
+    
+  
+  }
+
+
+
+
+</style>
+
+
+    </head>
+    <body>
+    
+    <div class="header">
+      <a href="#default" class="logo">SIGMA Report</a>
+      <div>
+      <p style="font-size: 6;">Date: {{date}}</p>
+      <p style="font-size: 6;">Time: {{time}}</p>
+      </div>
+    </div>
+    
+    <div class="sub-header" >
+      <h1>Vulnerability Scanning : </h1>
+      <p>Web Application Vulnerability Scanners are automated tools that scan web applications, normally from the outside, to look for security vulnerabilities such as Cross-site scripting, SQL Injection, Command Injection, Path Traversal and insecure server configuration.
+      </p>
+    </div>
+    <div style="margin-left:auto" >
+     <h2 > Vulnerabilities Section : </h2>
+     
+
+      <div class="headersD">
+      <h3>1) Headers and Cookies:</h3>
+      <hr>
+
+      {% for vulnerability in vulnerabilities %}
+      <h3>{{ vulnerability.name }}</h3>
+      <table>
+      <tr>
+      <th>Severity</th>
+        <td style="background-color:{{vulnerability.color}};text-align: center;">{{ vulnerability.severity }}</td>
+      </tr>
+
+      <tr>
+        <th>Description</th><td>{{ vulnerability.summary }}</td>
+      </tr>
+
+      <tr>
+        <th>Impact</th><td>{{ vulnerability.impact }}</td>
+      </tr>
+      
+      <tr>
+        <th>Remediation</th><td>{{ vulnerability.remediation }}</td>
+      </tr>
+      </table>
+      {% endfor %}
+
+      <h3>2) Open Ports:</h3>
+      <hr>
+      {% for port in ports %}
+      <h3>{{ port.name }}</h3>
+      <table>
+        <tr>
+          <th>Protocol</th><td>{{ port.protocol }}</td>
+        </tr>
+
+        <tr>
+          <th>Service</th><td>{{ port.service }}</td>
+        </tr>
+      <tr>
+        <th>Description</th><td>{{ port.summary }}</td>
+      </tr>
+
+      <tr>
+        <th>Impact</th><td>{{ port.impact }}</td>
+      </tr>
+      </table>
+      {% endfor %}
+    </div>
+    
+    
+  </div>
+  <h3>Severity Classification:</h3>
+  <hr >
+   <div class="box" >
+     <div class="x-box"> <img src="image.png" alt=""></div>
+     <div class="x-box-cont">
+        <h3>Severities PieChart</h3>
+        <strong style="color: red;">Crtical 10%</strong>
+        <strong style="color: orange" >Medium 30%</strong>
+        <strong style="color: yellow">low 40%</strong>
+        <strong style="color: green" >Best Pratice 20%</strong>
+     </div>
+    </div>
+    <div class="details">
+     <strong>This PieChart is talking about percentage of Vulnerability and Headers Severities .To help you better decide which vulnerabilities should be fixed first, we classified the severities into 4 categories : Critical, Medium, 
+      Low, Best practice. </strong>
+
+      <p> <span style="font-weight: bold;">1) Critical Severity :</span>  The vulnerabilities marked as Critical Severity can allow attackers to execute code on the web application or application server, or access sensitive data.
+
+
+      <p> <span style="font-weight: bold;">2) Medium Severity :</span> The vulnerabilities marked as Medium Severity usually arise because of errors and deficiencies in the application configuration. By exploiting these security issues, malicious attackers can access sensitive information on the application or server.
+
+
+
+      <p><span style="font-weight: bold;">3) Low Severity :</span>  The vulnerabilities marked as Low Severity are usually not critical, but they can still be exploited by attackers to access sensitive information on the application or server.  </p>
+
+
+      <p> <span style="font-weight: bold;">4) Best Practice :</span> The vulnerabilities are marked as Best Practice are recommendations for an extra security layer, defense in depth and to help continually contribute to the security of your web applications.
+      </p>
+    </div>
+    <h3>Conclusion:</h3>
+    <hr>
+ <!-- make a conclusion about the report -->
+    <div class="details">
+      
+      <p>The report is generated based on the results of the vulnerability scanning process on <span style="font-weight: bold; font-size: 22px; "><u>{{ url }}</u></span>. The report includes information about the headers, cookies and open ports that were detected during the scan.
+      The report also includes information about the severity of the vulnerabilities, the impact of the vulnerabilities on the web application and how to remediate them.</p>
+
+      
+      <p>The scanning process found <span style="font-weight: bold; font-size: 22px; "><u>{{ vulnerabilities|length }}</u></span> vulnerabilities (headers and cookies) and <span style="font-weight: bold; font-size: 22px; "><u>{{ ports|length }}</u></span> open ports.
+        In order to remediate them, you need to check the vulnerabilities in the report and then use the information to remediate the vulnerabilities. </p>
+        
+        <p>For more information about vulnerabilities, you can visit the following links: </p>
+        
+        <p><a href="https://www.invicti.com/web-vulnerability-scanner/vulnerabilities/severity/information/" target="_blank">www.invicti.com</a></p>
+        <p><a href="https://www.cvedetails.com/" target="_blank">www.cvedetails.com</a></p>
+        <p><a href="https://geekflare.com/" target="_blank">www.geekflare.com</a></p>
+      </div>
+      
+      
+      <!-- <p>The scanning process is divided into two stages: </p>
+      <p>1) The first stage is the headers and cookies scanning process, which is used to detect the headers and cookies that are not secure and can be exploited by attackers to access sensitive information on the web application or server. </p>
+      <p>2) The second stage is the open ports scanning process, which is used to detect the open ports that are not secure and can be exploited by attackers to access sensitive information on the web application or server. </p> -->
+
+    <div class="footer">
+      <p>© 2022 Sigma. All rights reserved.</p>
+    </div>
+
+
+
+
+</body>
+</html>
