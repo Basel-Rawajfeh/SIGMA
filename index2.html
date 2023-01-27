@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css"> 
+
 
 
 <style>
@@ -12,7 +10,7 @@
     
     body{ 
       margin: 20px;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family:'times new roman', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       align-items: center;
       font-size: 20px;
     }  
@@ -28,8 +26,8 @@
       background-color: #f8f8f8;
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       border-radius: 35px;
-background: linear-gradient(145deg, #e6e6e6, #ffffff);
-box-shadow:  45px 45px 90px #ebebeb,
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  45px 45px 90px #ebebeb,
              -45px -45px 90px #ffffff;
     }
     .headersD th{
@@ -54,8 +52,8 @@ box-shadow:  45px 45px 90px #ebebeb,
       padding: 20px 10px;
       border-radius: 35px;
       border-radius: 35px;
-background: linear-gradient(145deg, #e6e6e6, #ffffff);
-box-shadow:  45px 45px 90px #ebebeb,
+      background: linear-gradient(145deg, #e6e6e6, #ffffff);
+      box-shadow:  45px 45px 90px #ebebeb,
              -45px -45px 90px #ffffff;
     }
     .header a {
@@ -106,8 +104,53 @@ box-shadow:  45px 45px 90px #ebebeb,
       background-color: #dddddd;
     }
 
-    /* box class style */
+  .box{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    border-radius: 4px;
+    
+    font-size: 20px;
+    border-radius: 35px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    /* center */
+    align-items: center;
+    text-align: center;
+
   
+
+  }
+  
+.x-box-cont{
+  border-radius: 54px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  
+  /* center and fit content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.x-box-cont strong{
+
+  display: block;
+}
+
+
+
 /* style the details class */
     .details{
       margin-left: 20px;
@@ -137,77 +180,6 @@ box-shadow:  45px 45px 90px #ebebeb,
       margin-top: 20px;
     }
     
-
-
-.box{
-    /* flex */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-    /* space between */
-    justify-content:space-evenly;
-    /* margin */
-    margin: 0 auto;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    /* width */
-    width: 100%;
-    /* height */
-    height: 50vh;
-    /* background */
-    background: #fff;
-    /* border */
-
-    
-   
-}
-
-  .x-box-cont{
-    border-radius: 54px;
-background: linear-gradient(145deg, #cacaca, #f0f0f0);
-box-shadow:  41px 41px 82px #989898,
-             -41px -41px 82px #ffffff;
-    width: 40vh;
-    height: 40vh;
-    /* center and fit content */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 7vh;
-    margin-left: 7vh;
-
-
-  
-  }
-  .x-box-cont h3{
-    font-size: 30px;
-    /* text-transform: uppercase; */
-   
-    
-  
-    
-  }
-  .x-box-cont strong{
-  
-    display: block;
-    margin-bottom: 15px;
-    
-  
-  }
-
-
-
 
 </style>
 
@@ -286,14 +258,9 @@ box-shadow:  41px 41px 82px #989898,
   <h3>Severity Classification:</h3>
   <hr >
    <div class="box" >
-     <div class="x-box"> <img src="image.png" alt=""></div>
-     <div class="x-box-cont">
-        <h3>Severities PieChart</h3>
-        <strong style="color: red;">Crtical 10%</strong>
-        <strong style="color: orange" >Medium 30%</strong>
-        <strong style="color: yellow">low 40%</strong>
-        <strong style="color: green" >Best Pratice 20%</strong>
-     </div>
+      <div class="x-box"> 
+        <img src="image.png" alt="">
+      </div>
     </div>
     <div class="details">
      <strong>This PieChart is talking about percentage of Vulnerability and Headers Severities .To help you better decide which vulnerabilities should be fixed first, we classified the severities into 4 categories : Critical, Medium, 
@@ -337,7 +304,7 @@ box-shadow:  41px 41px 82px #989898,
       <p>2) The second stage is the open ports scanning process, which is used to detect the open ports that are not secure and can be exploited by attackers to access sensitive information on the web application or server. </p> -->
 
     <div class="footer">
-      <p>© 2022 Sigma. All rights reserved.</p>
+      <p>&copy;	2022 Sigma. All rights reserved.</p>
     </div>
 
 
